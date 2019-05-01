@@ -35,7 +35,7 @@ public class MyHeap{
 
         //check if max = parent
         if(max == data[index]){
-          sorted = true;
+          isSorted = true;
         }
 
         //swap values after comparisons
@@ -62,16 +62,22 @@ public class MyHeap{
         int parent = (index - 1) /2;
 
         //no parent
-        if(){
-
+        if(parent < 0){
+          isSorted = true;
         }
 
         //kid > parent
-        if(){
-
-        } 
+        else{
+          if(data[index] > data[parent]){
+            swap(data, index, parent);
+            index = parent;
+          }
+          else{
+            isSorted = true;
+          }
+        }
       }
-  }
+    }
 
   public static void heapify(int[]){
       //- convert the array into a valid heap. [ should be O(n) ]
