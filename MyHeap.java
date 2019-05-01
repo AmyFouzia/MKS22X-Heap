@@ -24,4 +24,10 @@ public class MyHeap{
      removing the largest value n-1 times (remove places at end of the sub-array).*/
    }
 
+   public static void swap(int[] data, int a, int b){
+     int track = data[b];
+     data[b] = data[a];
+     data[a] = track;
+    }
+
 }
