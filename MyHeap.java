@@ -91,6 +91,13 @@ public class MyHeap{
       /*- sort the array [ should be O(nlogn) ] :
      converting it into a heap
      removing the largest value n-1 times (remove places at end of the sub-array).*/
+     heapify(data);
+
+     //2nd to last row
+     for(int i = data.length-1; i>=0; i--){
+       swap(data, 0, i);
+       pushDown(data, i, 0);
+     }
    }
 
    public static void swap(int[] data, int a, int b){
