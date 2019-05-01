@@ -40,12 +40,12 @@ public class MyHeap{
 
         //swap values after comparisons
         //right
-        if(rightKid < size && max == data[rightKid]){
+        else if(rightKid < size && max == data[rightKid]){
           swap(data, index, rightKid);
           index = rightKid;
         }
         //left
-        if(leftKid < size && max == data[leftKid]){
+        else if(leftKid < size && max == data[leftKid]){
           swap(data, index, leftKid);
           index = leftKid;
         }
@@ -55,6 +55,12 @@ public class MyHeap{
   private static void pushUp(int[]data, int index){
       /*- push the element at index i up into the correct position. This will swap it with the parent node until the parent node is larger or the root is reached. [ should be O(logn) ]
       - precondition: index is between 0 and data.length-1 inclusive.*/
+      
+      boolean isSorted = false;
+
+      while(!isSorted){
+
+      }
   }
 
   public static void heapify(int[]){
