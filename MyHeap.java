@@ -15,7 +15,7 @@ public class MyHeap{
         int leftKid = index * 2 + 1;
         int max = 0;
 
-        //if no kid
+        //if no kid exit while loop
         if(leftKid >= size && rightKid >= size){
           isSorted = true;
         }
@@ -23,15 +23,31 @@ public class MyHeap{
           max = data[index];
         }
 
-        //if right kid
+        //if right kid, check and set max
         if(rightKid < size){
-
+          max = Math.max(max, data[rightIndex]);
         }
 
-        //if left kid
+        //if left kid, check and set max
         if(leftKid < size){
+          max = Math.max(max, data[leftIndex]);
+        }
+
+        //check if max = parent
+        if(max == data[index]){
+          sorted = true;
+        }
+
+        //swap values after comparisons
+        //right
+        if(){
+
+        }
+        //left
+        if(){
           
         }
+
       }
   }
 
