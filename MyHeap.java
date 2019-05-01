@@ -25,12 +25,12 @@ public class MyHeap{
 
         //if right kid, check and set max
         if(rightKid < size){
-          max = Math.max(max, data[rightIndex]);
+          max = Math.max(max, data[rightKid]);
         }
 
         //if left kid, check and set max
         if(leftKid < size){
-          max = Math.max(max, data[leftIndex]);
+          max = Math.max(max, data[leftKid]);
         }
 
         //check if max = parent
@@ -40,14 +40,15 @@ public class MyHeap{
 
         //swap values after comparisons
         //right
-        if(){
-
+        if(rightKid < size && max == data[rightKid]){
+          swap(data, index, rightKid);
+          index = rightKid;
         }
         //left
-        if(){
-          
+        if(leftKid < size && max == data[leftKid]){
+          swap(data, index, leftKid);
+          index = leftKid;
         }
-
       }
   }
 
