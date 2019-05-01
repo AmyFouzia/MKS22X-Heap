@@ -79,11 +79,15 @@ public class MyHeap{
       }
     }
 
-  public static void heapify(int[]){
+  public static void heapify(int[] data){
       //- convert the array into a valid heap. [ should be O(n) ]
+      //start at 2nd to last row
+      for(int i = (data.length-1)/2; i>=0; i--){
+        pushDown(data, data.length, i);
+      }
   }
 
-  public static void heapsort(int[]){
+  public static void heapsort(int[] data){
       /*- sort the array [ should be O(nlogn) ] :
      converting it into a heap
      removing the largest value n-1 times (remove places at end of the sub-array).*/
